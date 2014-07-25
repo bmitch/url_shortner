@@ -2,6 +2,6 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'LinksController@create']);
 
-Route::post('Links', 'LinksController@store');
+Route::post('links', 'LinksController@store');
 
 Route::get('{hash}', 'LinksController@translateHash');

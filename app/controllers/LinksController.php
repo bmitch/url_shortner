@@ -19,6 +19,7 @@ class LinksController extends \BaseController {
 		{
 			// Little::make($url)
 			$hash = Little::make(Input::get('url'));
+			dd($hash);
 
 		}
 
@@ -30,7 +31,7 @@ class LinksController extends \BaseController {
 		return Redirect::home()->with([
 			'flash_message' => 'Here you go!' . Link_to($hash),
 			'hashed' => $hash
-			]);
+		]);
 	}
 
 
