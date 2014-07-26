@@ -11,5 +11,9 @@
 				{{ $errors->first('url', '<div class="error">:message</div>') }}
 			</div>
 		{{ Form::close() }}
+
+		@if (Session::has('hashed'))
+			<output>{{ link_to(Session::get('hashed')) }}</output>
+		@endif
 	</div>
 @stop

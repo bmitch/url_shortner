@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class NoneExistentHashException extends \Exception {
+class NonExistentHashException extends \Exception {
 
 
 	

@@ -1,5 +1,9 @@
 <?php
 
+
+use bmitch\Validation\ValidationException;
+use bmitch\Exceptions\NonExistentHashException;
+
 class LinksController extends \BaseController {
 
 	public function create()
@@ -19,8 +23,6 @@ class LinksController extends \BaseController {
 		{
 			// Little::make($url)
 			$hash = Little::make(Input::get('url'));
-			dd($hash);
-
 		}
 
 		catch (ValidationException $e)

@@ -79,3 +79,8 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+
+// Register event listeners
+
+Event::Listen('Link.creating', 'bmitch\Validation\LinkValidator@fire');

@@ -1,6 +1,6 @@
 <?php namespace bmitch\Shortener;
 
-use bmitch\Exceptions\NoneExistentHashException;
+use bmitch\Exceptions\NonExistentHashException;
 use bmitch\Repositories\LinkRepositoryInterface as LinkRepoInterface;
 use bmitch\Utilities\UrlHasher;
 
@@ -43,7 +43,7 @@ class LittleService {
 
 		$data = compact('url', 'hash');
 
-		\Event::fire('link.creating', [$data]);
+		\Event::fire('Link.creating', [$data]);
 
 		$this->LinkRepo->create($data);
 
